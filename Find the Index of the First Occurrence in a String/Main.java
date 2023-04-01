@@ -14,10 +14,10 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 public class Main {
     public static void main(String[] args) {
-        String haystack = "leetcode";
-        String needle = "leeto";
+        String haystack = "sadbutsad";
+        String needle = "sad";
         int out = firstOccurance(haystack,needle);
-        sys
+        System.out.println(out);
     }
     public static int firstOccurance(String haystack,String needle){
         int l1 = haystack.length();
