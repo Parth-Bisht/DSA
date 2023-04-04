@@ -17,8 +17,11 @@ public class Main {
 //        int[] sortedArray = output.sort();
 //        System.out.println(Arrays.toString(sortedArray));
 
-        InsertionSort output = new InsertionSort(arr);
-        int[] sortedArray = output.sort();
-        System.out.println(Arrays.toString(sortedArray));
+//        InsertionSort output = new InsertionSort(arr);
+//        int[] sortedArray = output.sort();
+//        System.out.println(Arrays.toString(sortedArray));
+        MergeSort out = new MergeSort();
+        out.merge(arr,0,4);
+        System.out.println(Arrays.toString(arr));
     }
 }
