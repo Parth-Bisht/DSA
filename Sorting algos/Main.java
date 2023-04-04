@@ -13,7 +13,11 @@ public class Main {
 //            System.out.println(e);
 //        }
 
-        BubbleSort output = new BubbleSort(arr);
+//        BubbleSort output = new BubbleSort(arr);
+//        int[] sortedArray = output.sort();
+//        System.out.println(Arrays.toString(sortedArray));
+
+        InsertionSort output = new InsertionSort(arr);
         int[] sortedArray = output.sort();
         System.out.println(Arrays.toString(sortedArray));
     }
