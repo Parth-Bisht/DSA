@@ -21,12 +21,11 @@ public class Main {
     }
 
     public static int lengthOfLastWord(String s){
-        
-//        String temp = s.trim();
-//        int count = 0;
-//        for(int i=temp.length();i>=0 && temp.charAt(i)!=' ';i--){
-//            count++;
-//        }
-//        return count;
+        String temp = s.trim();
+        int count = 0;
+        for(int i=temp.length()-1;i>=0 && temp.charAt(i)!=' ';i--){
+            count++;
+        }
+        return count;
     }
 }
