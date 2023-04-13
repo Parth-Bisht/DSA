@@ -15,7 +15,9 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-
+        int[] numbers = {4,1,2,1,2};
+        System.out.println(singleNumber(numbers));
+        System.out.println(xorfunction(numbers));
     }
 
     public static int singleNumber(int[] numbers){
@@ -31,4 +33,6 @@ public class Main {
         }
         return Integer.MIN_VALUE;
     }
+
+
 }
