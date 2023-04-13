@@ -34,5 +34,11 @@ public class Main {
         return Integer.MIN_VALUE;
     }
 
-
+    public static int xorfunction(int[] numbers){
+        int res = 0;
+        for(int x: numbers){
+            res ^= x;
+        }
+        return res;
+    }
 }
