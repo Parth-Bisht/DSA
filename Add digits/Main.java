@@ -14,6 +14,16 @@ Output: 0
 
 public class Main {
     public static void main(String[] args) {
+        int num = 38;
+        System.out.println(addDigits(num));
+    }
 
+    public static int addDigits(int num){
+        while(num>=10){
+            int rem = num%10;
+            int que = num/10;
+            num = rem+que;
+        }
+        return num;
     }
 }
