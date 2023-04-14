@@ -20,13 +20,29 @@ Input: n = 2
 Output: false
  */
 
+import java.util.HashSet;
+
 public class Main {
     public static void main(String[] args) {
         int num = 19;
         System.out.println(happyNumber(num));
     }
     public static boolean happyNumber(int num){
-
+        HashSet<Integer> set = new HashSet<>();
+        while(num!=1){
+            if(set.contains(num)) return false;
+            set.add(num);
+            num = sum(num);
+        }
+        return true;
     }
 
+    public static int sum(int n){
+        int sum = 0;
+        while(n>0){
+            sum += (n%10)*(n%10);
+            n = n/10;
+        }
+        return sum;
+    }
 }
