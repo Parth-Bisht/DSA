@@ -16,6 +16,7 @@ public class Main {
     public static void main(String[] args) {
         int num = 38;
         System.out.println(addDigits(num));
+        System.out.println(add(num));
     }
 
     public static int addDigits(int num){
@@ -25,5 +26,9 @@ public class Main {
             num = rem+que;
         }
         return num;
+    }
+
+    public static int add(int num){
+        return 1+(num-1)%9;
     }
 }
