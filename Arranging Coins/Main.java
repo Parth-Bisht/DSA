@@ -6,7 +6,8 @@ Given the integer n, return the number of complete rows of the staircase you wil
 
 public class Main {
     public static void main(String[] args) {
-        
+        int n = 8;
+        System.out.println(arrangeCoins(8));
     }
     public static int arrangeCoins(int n){
         int ans = 1;
