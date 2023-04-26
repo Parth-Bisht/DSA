@@ -14,7 +14,9 @@ Explanation: 'e' is the letter that was added.
  */
 public class Main {
     public static void main(String[] args) {
-
+        String s = "abcd";
+        String t = "abcde";
+        System.out.println(difference(s,t));
     }
 
     public static char difference(String s, String t){
