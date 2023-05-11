@@ -13,9 +13,17 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] nums = {1,2,3,2};
-        System.out.println(Arrays.toString(nums));
+        System.out.println(uniqueNumber(nums));
     }
     public static int uniqueNumber(int nums[]){
-
+        int sum = 0;
+        for(int i=0;i<nums.length;i++){
+            int count = 0;
+            for(int j=0;j<nums.length;j++){
+                if(nums[i]==nums[j]) count++;
+            }
+            if(count==1) sum += nums[i];
+        }
+        return sum;
     }
 }
