@@ -17,6 +17,7 @@ public class Main {
         int[][] matrix = {{4,7,1},{8,9,9},{6,4,9}};
         int N = matrix.length;
         int M = matrix[0].length;
+        System.out.println(zigzag(matrix,N,M));
     }
     public static List<Integer> zigzag(int[][]matrix, int N,int M){
         List<Integer> ans = new ArrayList<Integer>();
