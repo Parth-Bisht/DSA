@@ -20,7 +20,12 @@ public class Main {
         int[][] nums = {{1,2,3,4},{8,7,6,5},{9,10,11,12}};
         int N = nums.length;
         int M = nums[0].length;
-        System.out.println(traverse2dArray(nums,N,M));
+        List<Integer> ans = traverse2dArray(nums,N,M);
+        String result = "";
+        for(int item: ans){
+            result = result + item + " ";
+        }
+        System.out.println(result);
     }
 
     public static List<Integer> traverse2dArray(int[][] nums, int N, int M){
