@@ -10,7 +10,17 @@ public class Main {
 
     }
     public static int checkLongestPalindrome(String s){
-        
+        int max = 0;
+        for(int i=0;i<s.length();i++){
+            String temp = "";
+            for(int j=i;j<s.length();j++){
+                temp += s.charAt(j);
+                if(checkPalindrome(temp,temp.length())){
+                    max = Math.max(temp.length(),max);
+                }
+            }
+        }
+        return max;
     }
 
     public static boolean checkPalindrome(String str, int length){
