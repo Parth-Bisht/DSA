@@ -7,7 +7,8 @@ Output: 7
  */
 public class Main {
     public static void main(String[] args) {
-
+        String s = "thisracecarisgood";
+        System.out.println(checkLongestPalindrome(s));
     }
     public static int checkLongestPalindrome(String s){
         int max = 0;
