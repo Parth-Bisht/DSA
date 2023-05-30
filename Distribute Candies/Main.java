@@ -20,6 +20,7 @@ public class Main {
     public static void main(String[] args) {
         int[] students = {1,0,2};
         int n = students.length;
+        System.out.println(candies(students,n));
     }
 
     public static int candies(int[] students, int n){
