@@ -24,7 +24,21 @@ public class Main {
 
     public static int candies(int[] students, int n){
         int[] candies = new int[n];
+        int sum = 0;
         Arrays.fill(candies,1);
-        
+        for(int i=1;i<n;i++){
+            if(students[i]>students[i-1]){
+                candies[i]=candies[i-1]+1;
+            }
+        }
+        for(int i=n-2;i>=0;i--){
+            if(students[i]>students[i+1] && candies[i]<=candies[i+1]){
+                candies[i]=candies[i+1]+1;
+            }
+        }
+        for(int i=0;i<n;i++){
+            sum += candies[i];
+        }
+        return sum;
     }
 }
