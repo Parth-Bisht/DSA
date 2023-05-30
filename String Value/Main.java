@@ -6,4 +6,12 @@ public class Main {
     public static void main(String[] args) {
 
     }
+    public static int stringValue(String s){
+        int sum = 0;
+        for(int i=0;i<s.length();i++){
+            int temp = (int) s.charAt(i);
+            sum += temp;
+        }
+        return sum;
+    }
 }
