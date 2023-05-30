@@ -10,6 +10,17 @@ Suppose elements of the array are 2 -4 6 8 -9, the string generated should be 20
  */
 public class Main {
     public static void main(String[] args) {
+        int[] arr = {2,-4,6,8,-9};
+        int n = arr.length;
+        System.out.println(toString(arr,n));
+    }
 
+    public static String toString(int[] arr, int n){
+        String bag = "";
+        for(int i=0;i<n;i++){
+            if(arr[i]<0) bag+=0;
+            else bag += arr[i];
+        }
+        return bag;
     }
 }
