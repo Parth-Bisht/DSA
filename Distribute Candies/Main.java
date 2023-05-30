@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 There are n students standing in a line. Each student is assigned a rating value.
 
@@ -16,7 +18,13 @@ output: 5
  */
 public class Main {
     public static void main(String[] args) {
-
+        int[] students = {1,0,2};
+        int n = students.length;
     }
-    
+
+    public static int candies(int[] students, int n){
+        int[] candies = new int[n];
+        Arrays.fill(candies,1);
+        
+    }
 }
