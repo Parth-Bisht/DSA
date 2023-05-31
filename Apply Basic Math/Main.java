@@ -13,14 +13,24 @@ Output: 1
  */
 public class Main {
     public static void main(String[] args) {
-
+        int[] arr = {14,7,8,2,4};
+        int N = arr.length;
+        System.out.println(math(N,arr));
     }
 
     public static int math(int N, int[] arr){
         int num = Integer.MAX_VALUE;
         int index = -1;
         for(int i=0;i<N;i++){
-
+            int temp = 0;
+            for(int j=0;j<N;j++){
+                if(i!=j) temp += arr[j];
+            }
+            if(temp%7==0 && num>arr[i]){
+                num = arr[i];
+                index = i;
+            }
         }
+        return index;
     }
 }
