@@ -2,6 +2,9 @@
 You are given 2 arrays
 Your task is to write a program that finds the one integer which is common in both arrays
 Note: There is always one integer common in both arrays.
+
+input: [2,5,6] [4,5,9]
+output: 5
  */
 public class Main {
     public static void main(String[] args) {
