@@ -17,6 +17,10 @@ public class Main {
     }
 
     public static int math(int N, int[] arr){
+        int num = Integer.MAX_VALUE;
+        int index = -1;
+        for(int i=0;i<N;i++){
 
+        }
     }
 }
