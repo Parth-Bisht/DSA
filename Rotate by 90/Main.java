@@ -17,6 +17,18 @@ Sample output:
  */
 public class Main {
     public static void main(String[] args) {
-        
+        int[][] matrix = new int[][]{{1,2,3,4},{5,6,7,8},{1,2,3,4},{5,6,7,8}};
+        int N = 4;
+        rotate(matrix,N);
     }
+    public static void rotate(int[][] matrix, int N){
+        for(int i=N-1;i>=0;i--){
+            String bag = "";
+            for(int j=0;j<N;j++){
+                bag += matrix[j][i]+" ";
+            }
+            System.out.println(bag);
+        }
+    }
+
 }
