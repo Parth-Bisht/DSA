@@ -22,4 +22,27 @@ Pairs whose i<j and j-i is prime are :-
 Sum of all differences is2+4+11+3+5+4+9+7 = 45.
  */
 public class Main {
+    public static void main(String[] args) {
+        int[] A = new int[] {1,2,3,5,7,12};
+        int N = 6;
+        System.out.
+    }
+    public static int specialSum(int[] A, int N){
+        int sum = 0;
+        for(int i=0;i<N-1;i++){
+            for(int j=i+1;j<N;j++){
+                if(i<j && isPrime(j-i)){
+                    sum += Math.abs(A[i]-A[j]);
+                }
+            }
+        }
+        return sum;
+    }
+    public static boolean isPrime(int num){
+        if(num==1) return false;
+        for(int i=2;i<num;i++){
+            if(num%i==0) return false;
+        }
+        return true;
+    }
 }
