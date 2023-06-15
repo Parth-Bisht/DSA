@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         int[] A = new int[] {1,2,3,5,7,12};
         int N = 6;
-        System.out.
+        System.out.println(specialSum(A,N));
     }
     public static int specialSum(int[] A, int N){
         int sum = 0;
