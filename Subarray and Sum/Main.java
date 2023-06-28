@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -16,6 +17,8 @@ public class Main {
         int n = 4;
         int k = 3;
         int[] arr = {2,3,4,6};
+        int output = subarrayAndSum(n,k,arr);
+        System.out.println(output);
     }
 
     public static int subarrayAndSum(int n,int k,int[] arr){
@@ -24,15 +27,15 @@ public class Main {
         int s = Arrays.stream(arr).sum();
         if(s%k==1) return 1;
         else{
-            for(int i=0;i<n;i++){
-                int[] temp = new int[n];
-                temp[0] = arr[i];
+            for(int i=0;i<n-1;i++){
+                ArrayList<Integer> temp = new ArrayList<>();
+                temp.add(arr[i]);
                 int sum = arr[i];
                 for(int j=i+1;j<n;j++){
-                     temp[j] = arr[j];
+                     temp.add(arr[j]);
                      sum += arr[j];
                      if(sum%k==1){
-                         max = Math.max(max,temp.length);
+                         max = Math.max(max, temp.size());
                      }
                 }
             }
