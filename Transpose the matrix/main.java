@@ -26,4 +26,8 @@ public class main {
         int n = 5,m=4;
         int[][] matrix = {{0,0,0,0},{1,1,1,1},{2,2,2,2},{3,3,3,3},{4,4,4,4}};
     }
+
+    public static void transpose(int n, int m, int[][] matrix){
+        
+    }
 }
