@@ -25,9 +25,16 @@ public class main {
     public static void main(String[] args) {
         int n = 5,m=4;
         int[][] matrix = {{0,0,0,0},{1,1,1,1},{2,2,2,2},{3,3,3,3},{4,4,4,4}};
+        transpose(n,m,matrix);
     }
 
     public static void transpose(int n, int m, int[][] matrix){
-        
+        for(int i=0;i<m;i++){
+            String bag = "";
+            for(int j=0;j<n;j++){
+                bag += matrix[j][i] + " ";
+            }
+            System.out.println(bag);
+        }
     }
 }
