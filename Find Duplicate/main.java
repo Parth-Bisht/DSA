@@ -17,4 +17,19 @@ public class main {
     public static void main(String[] args) {
 
     }
+    public static int duplicateNumber(int[] nums){
+        int slow = nums[0];
+        int fast = nums[0];
+        do{
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }while(slow!=fast);
+
+        slow = 0;
+        while(slow!=fast){
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
+    }
 }
