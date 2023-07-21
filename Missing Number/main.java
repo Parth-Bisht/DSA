@@ -10,7 +10,7 @@ Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0
  */
 public class main {
     public static void main(String[] args) {
-        int[] nums = new int[]{3,0,1};
+        int[] nums = new int[]{9,6,4,2,3,5,7,0,1};
         int output = missigNumber(nums);
         System.out.println(output);
     }
