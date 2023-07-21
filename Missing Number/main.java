@@ -10,9 +10,14 @@ Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0
  */
 public class main {
     public static void main(String[] args) {
-
+        int[] nums = new int[]{3,0,1};
+        int output = missigNumber(nums);
+        System.out.println(output);
     }
     public static int missigNumber(int[] nums){
-        
+        int n = nums.length;
+        int sum  = n*(n+1)/2;
+        for(int i: nums) sum -= i;
+        return sum;
     }
 }
