@@ -23,5 +23,17 @@ public class main {
     public static void main(String[] args) {
 
     }
-    
+
+    public static int firstBadVersion(int n){
+        int s=1,e=n,pos=1;
+        while(s<=e){
+            
+        }
+    }
+
+    public static boolean isBadVersion(int version, int input){
+        if(version==input) return true;
+        return false;
+    }
+
 }
