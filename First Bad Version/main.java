@@ -24,9 +24,10 @@ public class main {
     public static void main(String[] args) {
         int n = 5;
         bad = 4;
+        System.out.println(firstBadVersion(n));
     }
 
-    public static int firstBadVersion(int n, int bad){
+    public static int firstBadVersion(int n){
         int s=1,e=n,pos=1;
         while(s<=e){
             int mid = s+(e-s)/2;
