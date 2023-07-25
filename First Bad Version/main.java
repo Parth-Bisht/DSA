@@ -20,19 +20,27 @@ Then 4 is the first bad version.
  */
 
 public class main {
+    private static int bad;
     public static void main(String[] args) {
-
+        int n = 5;
+        bad = 4;
     }
 
-    public static int firstBadVersion(int n){
+    public static int firstBadVersion(int n, int bad){
         int s=1,e=n,pos=1;
         while(s<=e){
-            
+            int mid = s+(e-s)/2;
+            if(isBadVersion(mid)){
+                pos = mid;
+                e = mid-1;
+            }else{
+                s = mid+1;
+            }
         }
+        return pos;
     }
-
-    public static boolean isBadVersion(int version, int input){
-        if(version==input) return true;
+    public static boolean isBadVersion(int version){
+        if(version>=bad) return true;
         return false;
     }
 
