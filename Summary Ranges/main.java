@@ -31,7 +31,7 @@ public class main {
         int i=0;
         while(i<nums.length){
             start = nums[i];
-            while(i< nums.length && nums[i+1]==nums[i]+1) i++;
+            while(i+1< nums.length && nums[i+1]==nums[i]+1) i++;
             end = nums[i];
             if(start==end) output.add(start+"");
             else output.add(start+"->"+end);
