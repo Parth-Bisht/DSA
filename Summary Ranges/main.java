@@ -22,7 +22,8 @@ Explanation: The ranges are:
  */
 public class main {
     public static void main(String[] args) {
-
+        int[] nums = new int[]{0,1,2,4,5,7};
+        System.out.println(summaryRanges(nums));
     }
     public static List<String> summaryRanges(int[] nums){
         List<String> output = new ArrayList<>();
