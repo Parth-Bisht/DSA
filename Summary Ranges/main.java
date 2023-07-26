@@ -1,3 +1,5 @@
+import java.util.*;
+
 /*
 You are given a sorted unique integer array nums.
 
@@ -21,5 +23,19 @@ Explanation: The ranges are:
 public class main {
     public static void main(String[] args) {
 
+    }
+    public static List<String> summaryRanges(int[] nums){
+        List<String> output = new ArrayList<>();
+        int start,end;
+        int i=0;
+        while(i<nums.length){
+            start = nums[i];
+            while(i< nums.length && nums[i+1]==nums[i]+1) i++;
+            end = nums[i];
+            if(start==end) output.add(start+"");
+            else output.add(start+"->"+end);
+            i++;
+        }
+        return output;
     }
 }
