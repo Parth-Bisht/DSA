@@ -30,7 +30,8 @@ Since 42 is in the range [-231, 231 - 1], the final result is 42.
  */
 public class main {
     public static void main(String[] args) {
-
+        String s = "-43 in words";
+        System.out.println(myAtoi(s));
     }
     public static int myAtoi(String s){
         int len = s.length();
