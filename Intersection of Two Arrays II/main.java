@@ -16,7 +16,10 @@ Explanation: [9,4] is also accepted.
  */
 public class main {
     public static void main(String[] args) {
-
+        int[] nums1 = new int[]{4,9,5};
+        int[] nums2 = new int[]{9,4,9,8,4};
+        int[] out = intersect(nums1,nums2);
+        System.out.println(Arrays.toString(out));
     }
     public static int[] intersect(int[] nums1,int[] nums2){
         Arrays.sort(nums1);
