@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 Write a function that reverses a string. The input string is given as an array of characters s.
 
@@ -13,7 +15,9 @@ Output: ["h","a","n","n","a","H"]
  */
 public class main {
     public static void main(String[] args) {
-
+        char[] s = new char[]{'h','e','l','l','o'};
+        reverseString(s);
+        System.out.println(Arrays.toString(s));
     }
     public static void reverseString(char[] s){
         int i=0,j=s.length-1;
