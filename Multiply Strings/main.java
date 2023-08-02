@@ -15,9 +15,9 @@ Output: "56088"
  */
 public class main {
     public static void main(String[] args) {
-        String num1 = "2";
-        String num2 = "3";
-        System.out.println(multiply());
+        String num1 = "123456789432632454325";
+        String num2 = "9876543219435943435432";
+        System.out.println(multiply(num1,num2));
     }
     public static String multiply(String num1, String num2) {
         BigInteger a = new BigInteger(num1);
