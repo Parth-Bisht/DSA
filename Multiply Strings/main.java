@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /*
 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
 
@@ -12,5 +14,15 @@ Input: num1 = "123", num2 = "456"
 Output: "56088"
  */
 public class main {
-    
+    public static void main(String[] args) {
+        String num1 = "2";
+        String num2 = "3";
+        System.out.println(multiply());
+    }
+    public static String multiply(String num1, String num2) {
+        BigInteger a = new BigInteger(num1);
+        BigInteger b = new BigInteger(num2);
+        BigInteger c = a.multiply(b);
+        return String.valueOf(c);
+    }
 }
