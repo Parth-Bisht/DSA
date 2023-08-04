@@ -13,4 +13,10 @@ public class main {
     public static void main(String[] args) {
 
     }
+    private static double pow(double x, long n){
+        if(n==0) return 1;
+        if(n<0) return 1.0/pow(x,-n);
+        if(n%2==1) return pow(x*x,(n-1)/2);
+        else return pow(x*x,n/2);
+    }
 }
