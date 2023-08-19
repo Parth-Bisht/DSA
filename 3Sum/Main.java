@@ -30,7 +30,8 @@ Explanation: The only possible triplet sums up to 0.
 public class Main {
     public static void main(String[] args) {
 //        int[] nums = new int[] {-1,0,1,2,-1,-4};
-        int[] nums = new int[] {0,1,1};
+//        int[] nums = new int[] {0,1,1};
+        int[] nums = new int[] {0,0,0};
         System.out.println(threeSum(nums));
     }
     public static List<List<Integer>> threeSum(int[] nums){
