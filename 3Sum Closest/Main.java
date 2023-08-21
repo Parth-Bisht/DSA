@@ -18,7 +18,9 @@ Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
  */
 public class Main {
     public static void main(String[] args) {
-
+    int[] nums = new int[] {-1,2,1,-4};
+    int target = 1;
+    System.out.println(threeSumClosest(nums,target));
     }
 
     public static int threeSumClosest(int[] nums,int target){
