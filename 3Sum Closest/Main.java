@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /*
 Given an integer array nums of length n and an integer target,
@@ -17,6 +18,11 @@ Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
  */
 public class Main {
     public static void main(String[] args) {
-        
+
+    }
+
+    public static int threeSumClosest(int[] nums,int target){
+        Arrays.sort(nums);
+        int closestSum = nums[0]+nums
     }
 }
