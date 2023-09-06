@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /*
 Given a collection of candidate numbers (candidates) and a target number (target),
 find all unique combinations in candidates where the candidate numbers sum to target.
@@ -28,5 +32,14 @@ Output:
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+    }
+    public static List<List<Integer>> combinationSum(int[] nums,int target){
+        List<List<Integer>> list = new ArrayList<>();
+        Arrays.sort(nums);
+        return list;
+    }
+
+    private static void backtrack(List<List<Integer>> list,List<Integer> temp,int[] nums,int target,int start){
+        
     }
 }
