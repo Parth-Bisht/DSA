@@ -31,7 +31,9 @@ Output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[] nums = new int[]{2,5,2,1,2};
+        int target = 5;
+        System.out.println(combinationSum(nums,target));
     }
     public static List<List<Integer>> combinationSum(int[] nums,int target){
         List<List<Integer>> list = new ArrayList<>();
