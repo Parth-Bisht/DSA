@@ -24,10 +24,20 @@ public class Main {
         for(int i=1;i<=3;i++){
             strs.add(i);
         }
+        strange(strs,new ArrayList<>(),0);
     }
 
     public static void strange(ArrayList<Integer> strs,ArrayList<Integer> tempStr,int index){
-        if(tempStr.size()>=0) System.out.println(tempStr);
+        if(tempStr.size()>=0) {
+            StringBuilder result = new StringBuilder();
+            for(int i=0;i<tempStr.size();i++){
+                result.append(tempStr.get(i));
+                if(i<tempStr.size()-1){
+                    result.append(" ");
+                }
+            }
+            System.out.println(result.toString());
+        }
         if(index==strs.size()) return;
         for(int i=index;i<strs.size();i++){
             tempStr.add(strs.get(i));
