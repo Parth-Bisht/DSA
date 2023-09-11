@@ -27,6 +27,12 @@ public class Main {
     }
 
     public static void strange(ArrayList<Integer> strs,ArrayList<Integer> tempStr,int index){
-
+        if(tempStr.size()>=0) System.out.println(tempStr);
+        if(index==strs.size()) return;
+        for(int i=index;i<strs.size();i++){
+            tempStr.add(strs.get(i));
+            strange(strs,tempStr,i+1);
+            tempStr.remove(tempStr.size()-1);
+        }
     }
 }
