@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Dr. Strange has n distinct integers from 1 to n. He uses his mind power and time stone to calculate all the possible
 subsets using the given n integers. Generate all the possible subsets.
@@ -17,6 +19,14 @@ Sample Output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int n = 3;
+        ArrayList<Integer> strs = new ArrayList<>();
+        for(int i=1;i<=3;i++){
+            strs.add(i);
+        }
+    }
+
+    public static void strange(ArrayList<Integer> strs,ArrayList<Integer> tempStr,int index){
+
     }
 }
