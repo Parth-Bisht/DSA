@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Dr. Strange is back again and this time he has an array A with n integers which may have duplicates.
 So he again uses his mind power and time stone to calculate all the possible subsets of the input array A.
@@ -17,6 +19,14 @@ sample output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int n = 3;
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(2);
+    }
+
+    public static void strangeII(ArrayList<Integer> arr,ArrayList<Integer> tempArr, int index){
+    
     }
 }
