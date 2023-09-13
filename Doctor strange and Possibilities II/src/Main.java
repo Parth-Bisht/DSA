@@ -29,7 +29,14 @@ public class Main {
 
     public static void strangeII(ArrayList<Integer> arr,ArrayList<Integer> tempArr, int index){
         if(tempArr.size()>=0){
-            System.out.println(tempArr);
+            StringBuilder result = new StringBuilder();
+            for(int i=0;i<tempArr.size();i++){
+                result.append(tempArr.get(i));
+                if(i<tempArr.size()-1){
+                    result.append(" ");
+                }
+            }
+            System.out.println(result.toString());
         }
         if(index==arr.size()) return;
         for(int i=index;i<arr.size();i++){
