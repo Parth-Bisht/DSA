@@ -24,6 +24,7 @@ public class Main {
         arr.add(1);
         arr.add(2);
         arr.add(2);
+        strangeII(arr,new ArrayList<>(),0);
     }
 
     public static void strangeII(ArrayList<Integer> arr,ArrayList<Integer> tempArr, int index){
