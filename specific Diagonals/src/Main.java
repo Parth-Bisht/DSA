@@ -31,17 +31,17 @@ public class Main {
                 }
             }
         }
-        ArrayList<Integer> leftDiag = new ArrayList<>();
-        ArrayList<Integer> rightDiag = new ArrayList<>();
+        StringBuilder leftDiag = new StringBuilder();
+        StringBuilder rightDiag = new StringBuilder();
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(matrix[i][j]==K){
-                    leftDiag.add(matrix[i][j]);
-                    rightDiag.add(matrix[i][j]);
+                    leftDiag.append(matrix[i][j]).append(" ");
+                    rightDiag.append(matrix[i][j]).append(" ");
                 } else if(i-j==a-b) {
-                    leftDiag.add(matrix[i][j]);
+                    leftDiag.append(matrix[i][j]).append(" ");
                 } else if(i+j==a+b){
-                    rightDiag.add(matrix[i][j]);
+                    rightDiag.append(matrix[i][j]).append(" ");
                 }
             }
         }
