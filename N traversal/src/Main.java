@@ -17,9 +17,20 @@ Sample Output:
 public class Main {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
-        System.out.println();
+        int n = matrix[0].length;
+        nTraversal(matrix,n);
     }
-    public static void nTraversal(int[][] matrix){
-
+    public static void nTraversal(int[][] matrix,int n){
+        StringBuilder bag = new StringBuilder();
+        for(int i=n-1;i>=0;i--){
+            bag.append(matrix[i][0]).append(" ");
+        }
+        for(int i=1;i<n;i++){
+            bag.append(matrix[i][i]).append(" ");
+        }
+        for(int i=n-2;i>=0;i--){
+            bag.append(matrix[i][n-1]).append(" ");
+        }
+        System.out.println(bag);
     }
 }
