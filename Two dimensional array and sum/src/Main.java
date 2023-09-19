@@ -14,7 +14,9 @@ Sample Output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[][] matrix = new int[][]{{3,2,1},{2,2,2},{1,5,1}};
+        int n=3,m=3,s=6;
+        System.out.println(arrayAndSum(matrix,n,m,s));
     }
 
     public static int arrayAndSum(int[][] matrix,int n,int m,int s){
@@ -38,7 +40,7 @@ public class Main {
                 }
                 if(i>1 && j<m-2){
                     int sum = 0;
-                    sum += matrix[i][j]+matrix[i+1][j-1]+matrix[i+2][j-2];
+                    sum += matrix[i][j]+matrix[i-1][j+1]+matrix[i-2][j+2];
                     if(sum==s) count++;
                 }
             }
