@@ -17,30 +17,32 @@ public class Main {
     public static void main(String[] args) {
         char[][] matrix = new char[][]{{'s','a','f','e','r'},{'a','m','j','a','d'},{'b','a','b','o','l'},{'a','a','r','o','n'},{'s','o','n','g','s'}};
         int n=5,m=5;
+        String character = "saba";
+        System.out.println(arrayAndPhrase(matrix,n,m,character));
     }
-    public static int arrayAndPhrase(char[][] matrix,int n,int m){
+    public static int arrayAndPhrase(char[][] matrix,int n,int m, String c){
         int count = 0;
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(j<m-3){
                     String bag = "";
                     bag = bag + matrix[i][j]+matrix[i][j+1]+matrix[i][j+2]+matrix[i][j+3];
-                    if(bag.equals("saba")) count++;
+                    if(bag.equals(c)) count++;
                 }
                 if(i<n-3){
                     String bag = "";
                     bag = bag + matrix[i][j]+matrix[i+1][j]+matrix[i+2][j]+matrix[i+3][j];
-                    if(bag.equals("saba")) count++;
+                    if(bag.equals(c)) count++;
                 }
                 if(i<n-3 && j<m-3){
                     String bag = "";
                     bag = bag + matrix[i][j]+matrix[i+1][j+1]+matrix[i+2][j+2]+matrix[i+3][j+3];
-                    if(bag.equals("saba")) count++;
+                    if(bag.equals(c)) count++;
                 }
                 if(i>2 && j<m-3){
                     String bag = "";
                     bag = bag + matrix[i][j]+matrix[i-1][j+1]+matrix[i-2][j+2]+matrix[i-3][j+3];
-                    if(bag.equals("saba")) count++;
+                    if(bag.equals(c)) count++;
                 }
             }
         }
