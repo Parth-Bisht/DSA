@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 You are given an array, stored in a variable with the size arr
 The size of the array is stored in a variable with the name n
@@ -15,5 +18,22 @@ output:
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+    }
+
+    public static List<Integer> countDigits(int[] arr, int n){
+        List<Integer> output = new ArrayList<>();
+        output.add(0);
+        output.add(0);
+        output.add(0);
+        for(int num: arr){
+            if(num==0){
+                output.add(0,output.get(0)+1);
+            }else if(num==1){
+                output.add(1,output.get(1)+1);
+            } else if (num==2) {
+                output.add(2,output.get(2)+1);
+            }
+        }
+        return output;
     }
 }
