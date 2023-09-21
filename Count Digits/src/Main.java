@@ -17,7 +17,14 @@ output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[] arr = new int[]{0,1,0,1,1,1,0,2,2,0};
+        int n = 10;
+        List<Integer> output = countDigits(arr,n);
+        StringBuilder strings = new StringBuilder();
+        for(int num: output){
+            strings.append(num).append(" ");
+        }
+        System.out.println(strings);
     }
 
     public static List<Integer> countDigits(int[] arr, int n){
@@ -27,11 +34,11 @@ public class Main {
         output.add(0);
         for(int num: arr){
             if(num==0){
-                output.add(0,output.get(0)+1);
+                output.set(0,output.get(0)+1);
             }else if(num==1){
-                output.add(1,output.get(1)+1);
+                output.set(1,output.get(1)+1);
             } else if (num==2) {
-                output.add(2,output.get(2)+1);
+                output.set(2,output.get(2)+1);
             }
         }
         return output;
