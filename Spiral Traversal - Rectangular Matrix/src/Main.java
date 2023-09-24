@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
-    public static void spiralTraversal(){
+    public static void spiralTraversal(int[][] matrix, int n, int m){
 
     }
 }
