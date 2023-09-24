@@ -16,7 +16,9 @@ Sample Output:
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[][] matrix = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        int n = 3;
+        int m = 4;
     }
     public static void spiralTraversal(int[][] matrix, int n, int m){
 
