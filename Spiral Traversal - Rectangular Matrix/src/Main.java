@@ -19,8 +19,33 @@ public class Main {
         int[][] matrix = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         int n = 3;
         int m = 4;
+        spiralTraversal(matrix,n,m);
     }
     public static void spiralTraversal(int[][] matrix, int n, int m){
-
+        int left = 0, top=0, right = m-1,bottom=n-1,c=0;
+        StringBuilder bag = new StringBuilder();
+        while(c < (n * m)){
+            for(int i=top;i<=bottom;i++){
+                bag.append(matrix[i][left]).append(" ");
+                c++;
+            }
+            left++;
+            for(int i=left;i<=right;i++){
+                bag.append(matrix[bottom][i]).append(" ");
+                c++;
+            }
+            bottom--;
+            for(int i=bottom;i>=top;i--){
+                bag.append(matrix[i][right]).append(" ");
+                c++;
+            }
+            right--;
+            for(int i=right;i>=left;i--){
+                bag.append(matrix[top][i]).append(" ");
+                c++;
+            }
+            top++;
+        }
+        System.out.println(bag);
     }
 }
