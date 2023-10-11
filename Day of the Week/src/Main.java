@@ -22,6 +22,9 @@ public class Main {
         week.add("Friday");
         week.add("Saturday");
         week.add("Sunday");
+        int n = 9;
+        String day = "Monday";
+        System.out.println(DayWeek(day,n,week));
     }
     public static String DayWeek(String day, int n, List<String> week){
         while(n>7){
