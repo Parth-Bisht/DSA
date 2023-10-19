@@ -19,6 +19,7 @@ public class Main {
     public static void main(String[] args) {
         int [][] matrix = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
         int n = 3;
+        circularTraversal(matrix,n);
     }
     public static void circularTraversal(int[][] matrix, int n){
         List<Integer> output = new ArrayList<>();
@@ -27,8 +28,17 @@ public class Main {
             output.add(matrix[i][left]);
         }
         left++;
-        for(int i=left;i<right;i++){
-            
+        for(int i=left;i<=right;i++){
+            output.add(matrix[top][i]);
         }
+        top++;
+        for(int i=top;i<=bottom;i++){
+            output.add(matrix[i][right]);
+        }
+        right--;
+        for(int i=right;i>=left;i--){
+            output.add(matrix[bottom][i]);
+        }
+        System.out.println(output);
     }
 }
