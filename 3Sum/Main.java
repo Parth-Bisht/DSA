@@ -29,10 +29,10 @@ Explanation: The only possible triplet sums up to 0.
  */
 public class Main {
     public static void main(String[] args) {
-//        int[] nums = new int[] {-1,0,1,2,-1,-4};
+        int[] nums = new int[] {-1,0,1,2,-1,-4};
 //        int[] nums = new int[] {0,1,1};
-        int[] nums = new int[] {0,0,0};
-        System.out.println(threeSum(nums));
+//        int[] nums = new int[] {0,0,0};
+        System.out.println(revised(nums));
     }
     public static List<List<Integer>> threeSum(int[] nums){
         List<List<Integer>> ans = new ArrayList<>();
@@ -51,6 +51,31 @@ public class Main {
                     j++;
                     k--;
                 } else if (sum<0) {
+                    j++;
+                }else{
+                    k--;
+                }
+            }
+        }
+        return ans;
+    }
+
+    public static List<List<Integer>> revised(int[] arr){
+        List<List<Integer>> ans = new ArrayList<>();
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length-2;i++){
+            if(i>0 && arr[i]==arr[i-1]) continue;
+            int j = i+1;
+            int k = arr.length-1;
+            while(j<k){
+                int sum = arr[i]+arr[j]+arr[k];
+                if(sum==0){
+                    ans.add(Arrays.asList(arr[i],arr[j],arr[k]));
+                    while(j<k && arr[j]==arr[j+1]) j++;
+                    while(k>j && arr[k]==arr[k-1]) k--;
+                    j++;
+                    k--;
+                }else if(sum<0){
                     j++;
                 }else{
                     k--;

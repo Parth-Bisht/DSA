@@ -33,4 +33,19 @@ public class Main {
         }
         return index;
     }
+    public static int reversed(int N, int[] arr){
+        int min = Integer.MAX_VALUE;
+        int index = -1;
+        for(int i=0;i<arr.length;i++){
+            int temp = 0;
+            for(int j=0;j<arr.length;j++){
+                if(i!=j) temp += arr[j];
+            }
+            if(temp%7==0 && temp<min){
+                min = temp;
+                index = i;
+            }
+        }
+        return index;
+    }
 }
